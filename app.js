@@ -1,5 +1,9 @@
+const path = require("path");
 const express = require("express");
 const app = express();
+
+// static pages
+app.use(express.static(path.join(__dirname, "/public")));
 
 // home route
 app.get("", (req, res) => {
